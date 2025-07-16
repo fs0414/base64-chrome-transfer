@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Base64 Decoder",
+  "version": "1.0",
+  "description": "Base64エンコードされた値をデコードして解析します",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}

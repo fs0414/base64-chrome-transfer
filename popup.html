@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Base64 Encoder/Decoder</h2>
+        
+        <!-- エンコードセクション -->
+        <div class="section">
+            <h3>エンコード</h3>
+            <form id="encodeForm">
+                <div class="form-group">
+                    <label for="objectNameInput">オブジェクト名:</label>
+                    <input type="text" id="objectNameInput" placeholder="例: TestObject" required>
+                </div>
+                <div class="form-group">
+                    <label for="idInput">ID:</label>
+                    <input type="number" id="idInput" placeholder="例: 12345">
+                </div>
+                <div class="form-group">
+                    <label for="paddingInput">パディング:</label>
+                    <input type="text" id="paddingInput" placeholder="例: somePadding">
+                </div>
+                <button type="submit">エンコード</button>
+            </form>
+            
+            <div id="encodeOutput" class="output">
+                <div class="result-item">
+                    <label>Base64結果:</label>
+                    <span id="encodedResult">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- デコードセクション -->
+        <div class="section">
+            <h3>デコード</h3>
+            <form id="decodeForm">
+                <textarea 
+                    id="base64Input" 
+                    placeholder="Base64エンコードされた値を入力"
+                    rows="4"
+                ></textarea>
+                <button type="submit">デコード</button>
+            </form>
+            
+            <div id="decodeOutput" class="output">
+                <div class="result-item">
+                    <label>オブジェクト名:</label>
+                    <span id="objectName">-</span>
+                </div>
+                <div class="result-item">
+                    <label>ID:</label>
+                    <span id="objectId">-</span>
+                </div>
+                <div class="result-item">
+                    <label>パディング:</label>
+                    <span id="padding">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
